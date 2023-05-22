@@ -1,0 +1,22 @@
+// Definir la tasa de IVA para calcular los productos de la tienda
+var porcentajeIVA = 0.21;
+
+// Definir una lista de precios 
+var precios = [100, 200, 300, 400, 500];
+
+// Calcular el IVA para cada precio y mostrar el resultado
+for (var i = 0; i < precios.length; i++) {
+  var precio = precios[i];
+  var montoIVA = precio * porcentajeIVA;
+  var precioTotal = precio + montoIVA;
+
+  console.log("Precio: " + precio.toFixed(2));
+  console.log("Monto del IVA: " + montoIVA.toFixed(2));
+  console.log("Precio total: " + precioTotal.toFixed(2));
+
+  if (precioTotal > 500) {
+    console.log("¡Aplicar Descuento!");
+  }
+
+  console.log("-------------------------");
+}
